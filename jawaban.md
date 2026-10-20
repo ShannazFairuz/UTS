@@ -87,3 +87,16 @@ Produk fokus: P = 5 (PRD-05, Box Lipat Cetak 4 Warna). Saldo awal dari B3 adalah
 - **Consistency.** Transaksi hanya boleh membawa basis data dari satu keadaan valid ke keadaan valid lain sesuai aturan yang dipasang.  pada C1.2, constraint `ck_stok_produk_jumlah` menolak saldo negatif (1.580 - 7.900), sehingga stok tidak pernah masuk keadaan tidak valid.
 - **Isolation.** Transaksi yang berjalan bersamaan tidak saling mengganggu hasilnya. pada Eksperimen 2, `FOR UPDATE` membuat Sesi B menunggu Sesi A selesai, sehingga saldo akhir benar (700). Pada Eksperimen 1 tanpa penguncian, isolasi tidak cukup melindungi dan terjadi lost update (900).
 - **Durability.** Data hasil transaksi yang sudah COMMIT tidak hilang. setelah COMMIT pada C1.1, saldo 1.580 tetap terbaca dari sesi lain dan tetap ada setelah koneksi diputus lalu disambung ulang. **
+
+## Pernyataan Orisinalitas
+
+Saya, Shannaz Fairuz (23051430020), menyatakan bahwa seluruh
+isi folder uts ini saya kerjakan sendiri selama waktu ujian yang ditetapkan.
+Seluruh tangkapan layar dan keluaran perintah berasal dari komputer yang saya
+gunakan sendiri. Saya tidak berkomunikasi dengan siapa pun mengenai isi soal,
+tidak berbagi berkas, dan tidak menyalin pekerjaan orang lain.
+
+Kode verifikasi : UTS-7361
+Tanggal         : Selasa, 20 Oktober 2026, 08.07
+
+(UNTUK SCRENSHOOT TERDAPAT DI BUKTI_UTS)
